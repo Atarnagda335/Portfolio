@@ -1,5 +1,8 @@
 from cryptography.fernet import Fernet
 
+def space():
+  print(" ")
+
 '''
 def write_key():
   key = Fernet.generate_key()
@@ -11,7 +14,7 @@ write_key()
 
 def load_key():
   file = open("key.key", "rb")
-  key = file.read
+  key = file.read()
   file.close()
   return key
 
@@ -25,7 +28,7 @@ def view():
     for line in f.readlines():
       data = line.rstrip()
       user, passw = data.split(",")
-      fer.decrypt(passw.encode()).decode()
+      print("User:", user, ", Password:", fer.decrypt(passw.encode()).decode())
 
 def add():
   user = input("Username: ")
@@ -37,13 +40,19 @@ def add():
 
 while True:
   
-    mode = input("Would you like to add a new password or view existing ones? (view, add) press q to quit").lower()
+    mode = input("Would you like to add a new password or view existing ones (view, add) press q to quit? ").lower()
     if mode == "q":
+      space()
       break
     if mode == "view":
+      space()
       view()
+      space()
     elif mode == "add":
+      space()
       add()
+      space()
     else:
       print("Invalid Mode")
+      space()
       continue
