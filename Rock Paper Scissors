@@ -1,0 +1,53 @@
+import random
+
+# Use Kuso, Kiro or Shoga
+
+print("Choose Your Fighter")
+fighters = ["Kuso", "Kiro", "Shoga"]
+
+
+#unusable attacks
+#Dual Orb
+# Impaling Metal Rods
+#if user chooses kuso, and opponent chooses kiro, user wins.
+user_choice = input()
+if user_choice in fighters:
+  print(f'User Chose {user_choice}')
+  opponent_choice = random.choice(fighters)
+  print(f'Opponent chose {opponent_choice}')
+  if user_choice == "Kuso":
+    if opponent_choice == "Kiro":
+      print("Kuso uses Dual Orb")
+      print("Kiro uses Impaling Metal Rods")
+      print('''Kuso rushes towards Kuso with his deadly Dual Orb Attack, but is impaled by metal rods, stopping him in his tracks.''')
+    elif opponent_choice == "Shoga":
+      print("Kuso uses Dragazoidian Whip")
+      print("Shoga uses Lighting Armor to try to block the attack.")
+      print('''Shoga is decimated by the sheer power of the Dragazoidian whip, with intense heat and pressure, the fire turning pure white and blue.''')
+    elif opponent_choice == "Kuso":
+      print("Kuso confused, shoots a fire ball")
+      print("Opponent Kuso also shoots a fire ball")
+      print("The fire ball cancels out, then they brawl, with a punch and kick. They're exchanging blows but it's a draw.")
+  
+  if user_choice == "Kiro":
+    if opponent_choice == "Kuso":
+      print("Kuso uses a fire blast")
+      print("With Trugan Speed, Kiro teleports behind Kuso and punches him hard in the side of the head, with a metal enhanced blow. Kiro wins")
+    elif opponent_choice == "Kiro":
+      print("Kiro confused, shoots a metal blast")
+      print("Opponent Kiro dodges, and uses a chainsaw hand to cut off User Kiro's hand")
+      print("In a brutal metal exchange, they slash into each other's metal bodies coated now with blood")
+      print("They impale each other with a metal hand sword, and User Kiro coughs blood. Opponent Kiro laughs, before he also chokes on blood. Opponent Kiro falls, and User Kiro stands. Before he also falls. Draw")
+ 
+    elif opponent_choice == "Shoga":
+      print("Kiro uses his metal blade hand to try to slice Shoga. But Shoga just dodges his attacks. Shoga hits Kiro with a lightning kick, which doesn't do damage. Kiro slices through that Shoga with a bisection, but the afterimage fades. 1000 after images of Shoga attack Kiro which all get destroyed. Shoga is damaged and tired. I'll use my most powerful attack. Kiro tries to slice him with a laugh, and grazes Shoga's arm and leg. Shoga creates more after images, and they spin around each other in a dome. This attack will be my strongest. Shoga runs fast to create a thunder dome, which Kiro can't escape. Thunder DOME!!!! Kiro just watches around, looking for an exit. Now, all of this thunder. He strikes the ground with the thunder, which creates a lot of pressure and heat in the air. It starts raining. 'Hahahahaha! You missed' says Kiro. It's raining, and Shoga again creates afterimages. That won't work a second time. More metal blasts which hit after images. Shoga is faster than Kiro, and thunder starts attacking. Now's my chance. THUNDER DOMEEEEAAA!!!!!! Again using the same attack? THUNDER DRAGON!!!!!! All of the electricity from the second thunder dome turns into a thunder dragon which bites Kiro, even surpassing his metal armor. Kiro is defeated. Shoga wins. ")
+
+  if user_choice == "Shoga":
+    if opponent_choice == "Kuso":
+      print("Shoga creates many afterimages")
+      print("Kuso uses heatwave, making the air temperature insanely hot. Since Shoga is running fast due to trying to manuever the standind still Kuso, Kuso simply makes the temperature super hot. Running in heat makes Shoga faint. Kuso wins")
+    if opponent_choice == "Kiro":
+      print("Shoga uses 10,000 Thunder Barrage")
+      print("Kiro creates chainsaws and blades to surround him. Many of the afterimages disappear, but thunder amplified punches, kicks and elbows keep attacking Kiro until he faints. Shoga wins")
+      if opponent_choice == "Shoga":
+        print("User Shoga says 'Ah man, I don't really want to fight myself. Opponent Shoga says 'Same.' They just talk afterwords. Draw")
